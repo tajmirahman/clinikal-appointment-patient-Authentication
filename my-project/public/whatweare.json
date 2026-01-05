@@ -1,0 +1,29 @@
+{
+  "stats": [
+    {
+      "id": 1,
+      "count": 10,
+      "label": "Doctor(s)",
+      "icon": "https://i.ibb.co.com/5gSL9Dg5/3d-cartoon-doctor-icon-with-stethoscope.jpg"
+    },
+    {
+      "id": 2,
+      "count": 20,
+      "label": "Room(s)",
+      "icon": "https://i.ibb.co.com/twjGR3Vc/ambulance.png"
+    },
+    {
+      "id": 3,
+      "count": 23,
+      "label": "Year of Experience(s)",
+      "icon": "https://i.ibb.co.com/ZzXfqvhx/aid-box.png"
+    },
+    {
+      "id": 4,
+      "count": 40,
+      "label": "Opening Hours Per Week",
+      "icon": "https://i.ibb.co.com/hxnp8kTP/clock.png"
+    }
+  ],
+  "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, delectus placeat hic voluptatem fuga nemo ad fugit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, delectus placeat hic voluptatem fuga nemo ad fugit"
+}

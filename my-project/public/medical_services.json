@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Emergency Departments",
+    "description": "The emergency departments of our clinic operate 24 hours a day, although staffing levels may be varied in an attempt to reflect patient volume.",
+    "icon": "https://i.ibb.co.com/hJK8M9hT/download.png"
+  },
+  {
+    "id": 2,
+    "title": "24 Hour Service",
+    "description": "24-7 (usually spoken \"twenty-four seven\") is facility that is available any time and, usually, every day in our clinic health care center. We look after you every time.",
+    "icon": "https://i.ibb.co.com/RkBR7WRh/download-1.png"
+  },
+  {
+    "id": 3,
+    "title": "Advanced Technology",
+    "description": "Medical technology encompasses a wide range of healthcare products and is used to diagnose, monitor or treat diseases or medical conditions affecting humans.",
+    "icon": "https://i.ibb.co.com/HTPRtBt2/download.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Ambulance",
+    "description": "An ambulance is a vehicle for transportation of sick or injured people to, from or between places of treatment for an illness or injury.",
+    "icon": "https://i.ibb.co.com/kgyJj834/download-2.png"
+  },
+  {
+    "id": 5,
+    "title": "Primary Health Care",
+    "description": "Healthcare centres including clinics, doctor's offices, urgent care centers and ambulatory surgery centers serve as first point of contact with a health professional.",
+    "icon": "https://i.ibb.co.com/dJ0NqjkQ/download-3.png"
+  },
+  {
+    "id": 6,
+    "title": "Pharmacies and Drug Stores",
+    "description": "Pharmacies and drug stores comprise establishments engaged in retailing prescription or nonprescription drugs and medicines.",
+    "icon": "https://i.ibb.co.com/GDWW1vs/download-1.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Laboratory and Research",
+    "description": "A medical or clinical laboratory is a laboratory where tests are done on biological specimens in order to get information about the health of a patient.",
+    "icon": "https://i.ibb.co.com/zTLfZcc9/images.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Medical Nursing Home",
+    "description": "Medical nursing homes including residential treatment centers and geriatric care facilities are health care institutions with accommodation facilities.",
+    "icon": "https://i.ibb.co.com/99z0wbn9/images-1.jpg"
+  }
+]

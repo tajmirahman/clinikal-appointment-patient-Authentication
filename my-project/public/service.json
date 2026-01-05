@@ -1,0 +1,90 @@
+[
+    {
+        "id": 1,
+        "img": "https://i.ibb.co.com/SXyZ3dCm/Cardiovascular.jpg",
+        "icon": "https://i.ibb.co.com/60vQhf9G/cardiovas-icon.png",
+        "image_url": "https://i.ibb.co.com/SXyZ3dCm/Cardiovascular.jpg",
+        "disease_title": "Cardiovascular Center",
+        "details":"The Cardiovascular Center is a comprehensive medical facility dedicated to the prevention, diagnosis, treatment, and long-term management of heart and blood vessel diseases. As cardiovascular conditions remain one of the leading causes of illness worldwide, our center is designed to provide advanced, patient-centered cardiac care supported by modern technology and highly skilled specialists. We focus on delivering accurate diagnosis, effective treatment, and compassionate support at every stage of a patient’s heart health journey. Our center manages a wide range of cardiovascular conditions, including coronary artery disease, heart failure, hypertension, arrhythmias, valvular heart disease, peripheral vascular disease, and congenital heart disorders. Patients benefit from a multidisciplinary team that includes cardiologists, cardiac surgeons, interventional specialists, nurses, rehabilitation experts, dietitians, and support staff who work together to develop personalized care plans. Accurate diagnosis is the foundation of effective cardiovascular care. The Cardiovascular Center is equipped with advanced diagnostic tools such as electrocardiography, echocardiography, stress testing, Holter monitoring, cardiac CT, cardiac MRI, and coronary angiography. Treatment options include lifestyle modification, medication management, minimally invasive procedures, and complex cardiac surgeries. Preventive cardiology is strongly emphasized through screenings, education, and risk-factor management. Rehabilitation programs support recovery after cardiac events, combining supervised exercise, nutritional counseling, and emotional support. Patient education and long-term follow-up are integral to care, empowering individuals to manage their condition confidently. Through innovation, expertise, and compassionate care, the Cardiovascular Center is committed to improving heart health and enhancing quality of life."
+    },
+    {
+        "id": 2,
+        "img": "https://i.ibb.co.com/ch1HXTQP/childbirth.jpg",
+        "icon": "https://i.ibb.co.com/NdGDDsJQ/child-icon.png",
+        "image_url": "https://i.ibb.co.com/ch1HXTQP/childbirth.jpg",
+        "disease_title": "Childbirth Center",
+        "details": "The Childbirth Center provides safe, compassionate, and comprehensive maternity care from pregnancy through delivery and postnatal recovery. Prenatal services include regular checkups, ultrasounds, laboratory testing, and personalized health guidance to support maternal and fetal well-being. Labor and delivery services respect each mother’s birth plan while ensuring medical readiness for all situations. Postnatal care focuses on maternal recovery, newborn health screening, breastfeeding support, and parental education. Emotional well-being and family-centered care are core priorities. By combining modern obstetric care with compassion and education, the Childbirth Center ensures a positive childbirth experience."
+    },
+    {
+        "id": 3,
+        "img": "https://i.ibb.co.com/35Lw0zLT/cardiology.jpg",
+        "icon": "https://i.ibb.co.com/G3JxJCBm/cardio-icon.jpg",
+        "image_url": "https://i.ibb.co.com/35Lw0zLT/cardiology.jpg",
+        "disease_title": "Cardiology",
+        "details":  "The Skin Care Department offers comprehensive dermatological services focused on maintaining healthy skin and treating a wide range of skin conditions. Services include diagnosis and treatment of acne, eczema, psoriasis, infections, allergic reactions, and chronic skin disorders. Advanced therapies and cosmetic dermatology procedures are also available. Patient education and preventive skin care are emphasized to ensure long-term skin health."
+    },
+    {
+        "id": 4,
+        "img": "https://i.ibb.co.com/wrpT3M5S/skin.jpg",
+        "icon": "https://i.ibb.co.com/9m4SgnHg/skin-icon.png",
+        "image_url": "https://i.ibb.co.com/wrpT3M5S/skin.jpg",
+        "disease_title": "Skin Care",
+        "details": "Laboratory Services provide accurate and timely diagnostic testing essential for effective medical decision-making. The laboratory is equipped with modern technology to perform blood tests, biochemical analysis, microbiology, and pathology services. Strict quality control ensures reliable results. Laboratory services support all clinical departments and play a critical role in disease diagnosis, monitoring, and prevention. pathology services. Strict quality control ensures reliable results. Laboratory services support all clinical departments and play a critical role."
+    },
+    {
+        "id": 5,
+        "img": "https://i.ibb.co.com/LDVMJvd7/laboratory.jpg",
+        "icon": "https://i.ibb.co.com/NgBNybqn/lab-icons.png",
+        "image_url": "https://i.ibb.co.com/LDVMJvd7/laboratory.jpg",
+        "disease_title": "Laboratory Service",
+        "details": "Mammography services focus on early detection and screening of breast conditions using advanced imaging technology. Regular screenings help identify abnormalities at an early stage, improving treatment outcomes. The department ensures patient comfort, accurate imaging, and professional interpretation of results. Education on breast health and follow-up care is also provided. breast conditions using advanced imaging technology. Regular screenings help identify abnormalities at an early stage, improving treatment outcomes. The department ensures patient comfort, accurate imaging, and professional interpretation of results."
+    },
+    {
+        "id": 6,
+        "img": "https://i.ibb.co.com/nqFtsxF8/mammography.jpg",
+        "icon": "https://i.ibb.co.com/4g2pWBG9/mamo-icons.png",
+        "image_url": "https://i.ibb.co.com/nqFtsxF8/mammography.jpg",
+        "disease_title": "Mammography",
+        "details": "The Dermatology Department provides expert care for skin, hair, and nail conditions. Services include medical treatment for infections, autoimmune disorders, and chronic skin diseases, as well as cosmetic procedures. Personalized treatment plans and patient education ensure effective and long-lasting results. Department provides expert care for skin, hair, and nail conditions. Services include medical treatment for infections, autoimmune disorders, and chronic skin diseases, as well as cosmetic procedures. Personalized treatment plans and patient education ensure."
+    },
+    {
+        "id": 7,
+        "img": "https://i.ibb.co.com/Zpzdbh8V/dermatologist.jpg",
+        "icon": "https://i.ibb.co.com/HptprwPB/dar-icons.png",
+        "image_url": "https://i.ibb.co.com/Zpzdbh8V/dermatologist.jpg",
+        "disease_title": "Dermatologist",
+        "details": "The Anesthesiology Center delivers safe and effective anesthesia services for surgical and diagnostic procedures. Anesthesiologists assess patients preoperatively, manage anesthesia during procedures, and provide postoperative pain control. Patient safety, comfort, and continuous monitoring are top priorities. Anesthesiologists assess patients preoperatively, manage anesthesia during procedures, and provide postoperative pain control. Patient safety, comfort, and continuous monitoring are top priorities. Anesthesiologists assess patients preoperatively, manage anesthesia during procedures, and provide postoperative pain control. Patient safety, comfort, and continuous monitoring are top priorities."
+    },
+    {
+        "id": 8,
+        "img": "https://i.ibb.co.com/gZKDH6Fs/anaesthesiology.jpg",
+        "icon": "https://i.ibb.co.com/xqrnHRm7/ans-icons.png",
+        "image_url": "https://i.ibb.co.com/gZKDH6Fs/anaesthesiology.jpg",
+        "disease_title": "Anesthesiology Center",
+        "details": "The Pediatrics Department offers comprehensive healthcare services for infants, children, and adolescents. Care focuses on growth, development, disease prevention, and treatment of childhood illnesses. Vaccination programs, developmental screenings, and parental guidance are key services. The Pediatrics Department offers comprehensive healthcare services for infants, children, and adolescents. Care focuses on growth, development, disease prevention, and treatment of childhood illnesses. Vaccination programs, developmental screenings, and parental guidance are key services.The Pediatrics Department offers comprehensive healthcare services for infants, children, and adolescents. Care focuses on growth, development, disease prevention, and treatment of childhood illnesses. Vaccination programs, developmental screenings, and parental guidance are key services."
+    },
+    {
+        "id": 9,
+        "img": "https://i.ibb.co.com/k6P5tQrP/paediatrics.jpg",
+        "icon": "https://i.ibb.co.com/qM1jmRK5/pedi-icons.jpg",
+        "image_url": "https://i.ibb.co.com/k6P5tQrP/paediatrics.jpg",
+        "disease_title": "Pediatrics",
+        "details": "Comprehensive healthcare services for infants, children, and adolescents focusing on growth and development.The Radiology Center provides advanced imaging services such as X-ray, CT, MRI, and ultrasound. These imaging techniques support accurate diagnosis and treatment planning across medical specialties. The department prioritizes patient safety, precision, and timely reporting.The Radiology Center provides advanced imaging services such as X-ray, CT, MRI, and ultrasound. These imaging techniques support accurate diagnosis and treatment planning across medical specialties. The department prioritizes patient safety, precision, and timely reporting."
+    },
+    {
+        "id": 10,
+        "img": "https://i.ibb.co.com/TDRgqVmg/eye-care.jpg",
+        "icon": "https://i.ibb.co.com/XfrF0M00/eye-icons.png",
+        "image_url": "https://i.ibb.co.com/TDRgqVmg/eye-care.jpg",
+        "disease_title": "Eye Care",
+        "details": "Eye Care services include diagnosis and treatment of vision and eye-related conditions. Comprehensive eye exams, corrective vision services, and management of eye diseases are provided using modern ophthalmic technology. Patient education on eye health and preventive care is emphasized.Eye Care services include diagnosis and treatment of vision and eye-related conditions. Comprehensive eye exams, corrective vision services, and management of eye diseases are provided using modern ophthalmic technology. Patient education on eye health and preventive care is emphasized.Eye Care services include diagnosis and treatment of vision and eye-related conditions. Comprehensive eye exams, corrective vision services, and management of eye diseases are provided using modern ophthalmic technology. Patient education on eye health and preventive care is emphasized."
+    },
+    {
+        "id": 11,
+        "img": "https://i.ibb.co.com/pvrhjCs1/radiology.jpg",
+        "icon": "https://i.ibb.co.com/rRz61f0N/radio-icon.png",
+        "image_url": "https://i.ibb.co.com/pvrhjCs1/radiology.jpg",
+        "disease_title": "Radiology Center",
+        "details": "The Radiology Center provides advanced imaging services such as X-ray, CT, MRI, and ultrasound. These imaging techniques support accurate diagnosis and treatment planning across medical specialties. The department prioritizes patient safety, precision, and timely reporting.The Radiology Center provides advanced imaging services such as X-ray, CT, MRI, and ultrasound. These imaging techniques support accurate diagnosis and treatment planning across medical specialties. The department prioritizes patient safety, precision, and timely reporting.The Radiology Center provides advanced imaging services such as X-ray, CT, MRI, and ultrasound. These imaging techniques support accurate diagnosis and treatment planning across medical specialties. The department prioritizes patient safety, precision, and timely reporting."
+    }
+]
