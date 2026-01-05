@@ -1,8 +1,19 @@
 
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../Auth/AuthPorvider';
 
 
 const Header = () => {
+
+    const {user, logoutUser} = useContext(AuthContext);
+
+    const handleLogout=()=>{
+        logoutUser()
+        .then(()=>{})
+        .catch(()=>{})
+    }
+
 
 
     return (
@@ -28,11 +39,20 @@ const Header = () => {
                     <Link>Doctor</Link>
                     <Link>My Accont</Link>
                     <Link to={'/blog-post'}>Blog</Link>
-                   
+
                 </ul>
             </div>
             <div >
-                <button className='btn bg-[#29A3AA] text-white'>Make An Appointment</button>
+                {
+                  user &&  user?.email ? (
+                        <button onClick={handleLogout} className='btn bg-[#29A3AA] text-white'>Logout</button>
+                    ) 
+                    :
+                    <button className='btn bg-[#29A3AA] text-white'>Make An Appointment</button>
+                    
+                }
+                
+
             </div>
         </div>
 

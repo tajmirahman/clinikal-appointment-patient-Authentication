@@ -1,9 +1,10 @@
 import { useContext } from "react";
 import { AuthContext } from "./AuthPorvider";
+import { Link } from "react-router-dom";
 
 
 const Login = () => {
-    const user=useContext(AuthContext);
+    const {loginUser}=useContext(AuthContext);
     
     const handleLogin=(e)=>{
         e.preventDefault();
@@ -12,6 +13,12 @@ const Login = () => {
         const password=form.password.value;
 
         console.log(email,password)
+
+        loginUser(email, password)
+        .then(res=>{
+            console.log(res);
+        })
+        .catch(err=>console.log(err.code))
     }
 
 
@@ -33,6 +40,7 @@ const Login = () => {
                     <div className='flex justify-center mt-3'>
                         <button className='btn bg-[#32a3ac] text-white'>Login</button>
                     </div>
+                    <p className="mt-3">if you do not have an account. Pleases <Link to={'/auth/register'} className="text-red-400 underline">register?</Link></p>
                 </form>
             </div>
         </div>

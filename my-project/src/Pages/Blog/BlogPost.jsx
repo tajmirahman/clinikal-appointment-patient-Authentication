@@ -16,11 +16,12 @@ const BlogPost = () => {
                 <Header></Header>
             </section>
 
-            <div className='grid grid-cols-1 md:grid-cols-3 w-9/12 mx-auto gap-3 mt-10'>
+            <div className='grid grid-cols-1 md:grid-cols-3 w-9/12 mx-auto gap-3 mt-10 bg-base-300'>
                 {
                     blogPost.map(newBlog=><BlogPostCard newBlog={newBlog}></BlogPostCard>)
                 }
             </div>
+            
         </div>
     );
 };

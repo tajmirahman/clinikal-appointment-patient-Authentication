@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { AuthContext } from './AuthPorvider';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
 
@@ -51,6 +52,7 @@ const Register = () => {
                     <div className='flex justify-center mt-3'>
                         <button className='btn bg-[#32a3ac] text-white'>Register</button>
                     </div>
+                    <p className="mt-3">if you have an account. Pleases <Link to={'/auth/login'} className="text-red-400 underline">login?</Link></p>
                 </form>
             </div>
         </div>

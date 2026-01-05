@@ -8,6 +8,7 @@ import BlogPostDetails from "../Pages/Blog/BlogPostDetails";
 import AuthLayout from "../Auth/AuthLayout";
 import Login from "../Auth/Login";
 import Register from "../Auth/Register";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -29,7 +30,9 @@ const router = createBrowserRouter([
     },
     {
         path: '/service-details/:id',
-        element: <ServiceDetails></ServiceDetails>,
+        element: <PrivateRoute>
+            <ServiceDetails></ServiceDetails>
+        </PrivateRoute>,
         loader: () => fetch("/service.json")
     },
     {
@@ -46,14 +49,14 @@ const router = createBrowserRouter([
     {
         path: '/auth',
         element: <AuthLayout></AuthLayout>,
-        children:[
+        children: [
             {
-                path:'/auth/login',
-                element:<Login></Login>
+                path: '/auth/login',
+                element: <Login></Login>
             },
             {
-                path:'/auth/register',
-                element:<Register></Register>
+                path: '/auth/register',
+                element: <Register></Register>
             }
         ]
     },
