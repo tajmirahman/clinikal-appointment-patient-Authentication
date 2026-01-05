@@ -1,6 +1,10 @@
+import { useContext } from "react";
+import { AuthContext } from "./AuthPorvider";
 
 
 const Login = () => {
+    const user=useContext(AuthContext);
+    // console.log(user)
     return (
         <div className='w-9/12 mx-auto mt-10 */:border'>
             <div className="card my-10  w-[65%] mx-auto p-4 shadow-md">
