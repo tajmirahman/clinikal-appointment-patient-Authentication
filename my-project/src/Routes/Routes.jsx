@@ -6,6 +6,8 @@ import ServiceDetails from "../Pages/WhatWeDo/ServiceDetails";
 import BlogPost from "../Pages/Blog/BlogPost";
 import BlogPostDetails from "../Pages/Blog/BlogPostDetails";
 import AuthLayout from "../Auth/AuthLayout";
+import Login from "../Auth/Login";
+import Register from "../Auth/Register";
 
 
 const router = createBrowserRouter([
@@ -43,7 +45,17 @@ const router = createBrowserRouter([
 
     {
         path: '/auth',
-        element: <AuthLayout></AuthLayout>
+        element: <AuthLayout></AuthLayout>,
+        children:[
+            {
+                path:'/auth/login',
+                element:<Login></Login>
+            },
+            {
+                path:'/auth/register',
+                element:<Register></Register>
+            }
+        ]
     },
     {
         path: '*',
