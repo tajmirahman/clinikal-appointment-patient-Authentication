@@ -1,12 +1,9 @@
-import React, { useContext } from 'react';
+
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../Auth/AuthPorvider';
+
 
 const Header = () => {
 
-    const student=useContext(AuthContext);
-
-    console.log(student);
 
     return (
         <div className="navbar bg-gradient-to-r from-[#32c1ce]/20 to-[#5FD1D8]/20 backdrop flex justify-evenly item-center">

@@ -3,8 +3,8 @@ import { AuthContext } from './AuthPorvider';
 
 const Register = () => {
 
-    const createUser=useContext(AuthContext);
-    console.log(createUser);
+    const {createUser}=useContext(AuthContext);
+    // console.log(createUser);
 
     const handleSubmit=(e)=>{
         e.preventDefault();
@@ -17,7 +17,8 @@ const Register = () => {
 
         createUser(email,password)
         .then(res=>{
-            console.log(res)
+            
+            console.log("register user",res.user)
         })
         .catch(error=>console.log(error.code))
 
