@@ -6,13 +6,32 @@ import { AuthContext } from '../Auth/AuthPorvider';
 
 const Header = () => {
 
-    const { user, logoutUser } = useContext(AuthContext);
+    const { user, logoutUser,setPatient } = useContext(AuthContext);
     const [open, setOpen] = useState(false);
+
+    
 
     const handleLogout = () => {
         logoutUser()
             .then(() => { })
             .catch(() => { })
+    }
+
+    const hadleAppointment=(e)=>{
+        e.preventDefault();
+        const form= e.target;
+        const name=form.name.value;
+        const disease=form.disease.value;
+
+        const patientInfo={
+            name,disease
+        }
+        setPatient(patientInfo);
+
+        alert('data submit');
+
+        setPatient(false);
+
     }
 
 
@@ -55,18 +74,26 @@ const Header = () => {
 
             </div>
 
-                {/* This modal use for appointment */}
+            {/* This modal use for appointment */}
             {
                 open && (
                     <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
                         <div className="bg-white p-6 rounded-2xl w-[90%] max-w-md shadow-xl animate-scale">
-                            <h2 className="text-xl font-semibold mb-2">
-                                Popup Card
-                            </h2>
-
-                            <p className="text-gray-600 text-sm">
-                                Eta react state diye banano popup card.
-                            </p>
+                            <form onSubmit={hadleAppointment}>
+                                <fieldset className="fieldset">
+                                    <legend className="fieldset-legend">Patient Name</legend>
+                                    <input type="text" name='name' className="input" placeholder="Type here" />
+                                    
+                                </fieldset>
+                                <fieldset className="fieldset">
+                                    <legend className="fieldset-legend">Patient Disease</legend>
+                                    <input type="text" name='disease' className="input" placeholder="Type here" />
+                                      
+                                </fieldset>
+                                <div>
+                                    <button type='submit' className='btn'>submit</button>
+                                </div>
+                            </form>
 
                             <div className="mt-4 text-right">
                                 <button

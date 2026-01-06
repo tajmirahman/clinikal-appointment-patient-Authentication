@@ -9,6 +9,7 @@ import AuthLayout from "../Auth/AuthLayout";
 import Login from "../Auth/Login";
 import Register from "../Auth/Register";
 import PrivateRoute from "./PrivateRoute";
+import PatientDetails from "../Pages/PatientDetails";
 
 
 const router = createBrowserRouter([
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
         path: '/blog-post-details/:id',
         element: <BlogPostDetails></BlogPostDetails>,
         loader: () => fetch('/latestPost.json')
+    },
+    {
+        path:'/patient-details',
+        element: <PatientDetails></PatientDetails>
     },
 
     {

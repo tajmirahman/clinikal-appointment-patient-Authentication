@@ -9,6 +9,7 @@ const AuthPorvider = ({ children }) => {
 
     const [user, setUser] = useState(null);
     const [loading, setLoading]=useState(true);
+    const [patient, setPatient]=useState(null);
 
     const createUser = (email, password) => {
         return createUserWithEmailAndPassword(auth, email, password);
@@ -41,7 +42,9 @@ const AuthPorvider = ({ children }) => {
         user,
         setUser,
         logoutUser,
-        loading
+        loading,
+        setPatient,
+        patient
     }
 
 
