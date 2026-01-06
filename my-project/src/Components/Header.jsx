@@ -1,17 +1,18 @@
 
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Auth/AuthPorvider';
 
 
 const Header = () => {
 
-    const {user, logoutUser} = useContext(AuthContext);
+    const { user, logoutUser } = useContext(AuthContext);
+    const [open, setOpen] = useState(false);
 
-    const handleLogout=()=>{
+    const handleLogout = () => {
         logoutUser()
-        .then(()=>{})
-        .catch(()=>{})
+            .then(() => { })
+            .catch(() => { })
     }
 
 
@@ -44,17 +45,46 @@ const Header = () => {
             </div>
             <div >
                 {
-                  user &&  user?.email ? (
+                    user && user?.email ? (
                         <button onClick={handleLogout} className='btn bg-[#29A3AA] text-white'>Logout</button>
-                    ) 
-                    :
-                    <button className='btn bg-[#29A3AA] text-white'>Make An Appointment</button>
-                    
+                    )
+                        :
+                        <button onClick={() => setOpen(true)} className='btn bg-[#29A3AA] text-white'>Make An Appointment</button>
+
                 }
-                
 
             </div>
+
+                {/* This modal use for appointment */}
+            {
+                open && (
+                    <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
+                        <div className="bg-white p-6 rounded-2xl w-[90%] max-w-md shadow-xl animate-scale">
+                            <h2 className="text-xl font-semibold mb-2">
+                                Popup Card
+                            </h2>
+
+                            <p className="text-gray-600 text-sm">
+                                Eta react state diye banano popup card.
+                            </p>
+
+                            <div className="mt-4 text-right">
+                                <button
+                                    onClick={() => setOpen(false)}
+                                    className="btn btn-error btn-sm"
+                                >
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                )
+            }
+
+
         </div>
+
+
 
     );
 };

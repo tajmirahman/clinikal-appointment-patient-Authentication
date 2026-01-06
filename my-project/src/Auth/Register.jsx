@@ -29,7 +29,7 @@ const Register = () => {
 
     return (
         <div className='w-9/12 mx-auto mt-10 */:border'>
-            <div className="card my-10  w-[65%] mx-auto p-4 shadow-md">
+            <div className="card my-10  md:w-[65%] mx-auto p-4 shadow-md">
                 <h2 className='text-4xl text-center'>Register Form</h2>
                 <form onSubmit={handleSubmit} className="body p-2">
                     <fieldset className="fieldset ml-3">
