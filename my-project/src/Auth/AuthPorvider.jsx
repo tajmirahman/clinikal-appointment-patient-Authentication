@@ -11,8 +11,14 @@ const AuthPorvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
 
     const [patient, setPatient] = useState(() => {
-        const storedPatient = localStorage.getItem('paitent');
-        return storedPatient ? JSON.parse(storedPatient) : "";
+        // const storedPatient = localStorage.getItem('paitent');
+        // return storedPatient ? JSON.parse(storedPatient) : null;
+        try {
+            const storedPatient = localStorage.getItem("patient");
+            return storedPatient ? JSON.parse(storedPatient) : null;
+        } catch {
+            return null;
+        }
     });
 
     useEffect(()=>{
