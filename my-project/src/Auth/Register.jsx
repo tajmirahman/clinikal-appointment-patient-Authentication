@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const Register = () => {
 
-    const { createUser, userUpdate } = useContext(AuthContext);
+    const { createUser, userUpdate, googleLogin } = useContext(AuthContext);
     const navigate = useNavigate();
     const [error, setError] = useState('');
 
@@ -25,14 +25,22 @@ const Register = () => {
 
                 return userUpdate({ displayName: name, photoURL: photo })
                     .then(() => {
-                        navigate('/')
+                        navigate('/');
                     })
                     .catch(err => setError(err.code))
             })
             .catch(() => { })
-        
+
         form.reset();
 
+    }
+
+    const handleGoogleSubmit = () => {
+        googleLogin()
+            .then(() => {
+                navigate('/');
+            })
+            .catch(err => setError(err.code))
     }
 
 
@@ -67,6 +75,9 @@ const Register = () => {
                     </div>
                     <p className="mt-3">if you have an account. Pleases <Link to={'/auth/login'} className="text-red-400 underline">login?</Link></p>
                 </form>
+
+                <hr className='font-bold my-5' />
+                <button onClick={handleGoogleSubmit} className='btn w-2/5 mx-auto bg-[#32a3ac]'>with Google Login</button>
             </div>
         </div>
     );

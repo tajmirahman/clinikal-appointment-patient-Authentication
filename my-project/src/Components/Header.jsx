@@ -51,20 +51,21 @@ const Header = () => {
                     tabIndex="-1"
                     className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                     <Link to={'/'}>Home</Link>
-                    <Link>About</Link>
-                    <Link>Doctor</Link>
-                    <Link>My Accont</Link>
+                    {/* <Link>Doctor</Link>
+                    <Link>My Accont</Link> */}
                     <Link to={'/blog-post'}>Blog</Link>
+                    <Link to={'/patient-details'}>Appointment Information</Link>
+                    <Link>About</Link>
                 </ul>
             </div>
             <div className='text-white navbar-center hidden lg:flex'>
                 <ul className="menu menu-horizontal font-semibold px-1 gap-3">
                     <Link to={'/'}>Home</Link>
-                    <Link>About</Link>
-                    <Link>Doctor</Link>
-                    <Link>My Accont</Link>
+                    {/* <Link>Doctor</Link>
+                    <Link>My Accont</Link> */}
                     <Link to={'/blog-post'}>Blog</Link>
                     <Link to={'/patient-details'}>Appointment Information</Link>
+                    <Link>About</Link>
 
                 </ul>
             </div>

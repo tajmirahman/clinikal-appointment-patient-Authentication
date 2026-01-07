@@ -10,6 +10,7 @@ import Login from "../Auth/Login";
 import Register from "../Auth/Register";
 import PrivateRoute from "./PrivateRoute";
 import PatientDetails from "../Pages/PatientDetails";
+import Norply from "../Pages/Norply";
 
 
 const router = createBrowserRouter([
@@ -66,6 +67,11 @@ const router = createBrowserRouter([
                 element: <Register></Register>
             }
         ]
+    },
+    {
+        path:'/reset-noplay',
+        element:<Norply></Norply>
+
     },
     {
         path: '*',

@@ -1,11 +1,13 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "./AuthPorvider";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 const Login = () => {
-    const { loginUser } = useContext(AuthContext);
+    const { loginUser, passwordReset } = useContext(AuthContext);
     const [error, setError] = useState('');
+    const [email,setEmail]=useState('');
+    const navigate=useNavigate();
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -16,11 +18,24 @@ const Login = () => {
         // console.log(email,password)
 
         loginUser(email, password)
-            .then(() => { })
+            .then(() => { 
+                navigate('/');
+            })
             .catch(err => setError(err.code))
 
         form.reset();
     }
+
+    const handleReset = () => {
+        passwordReset(email)
+            .then(() => { 
+                navigate('/reset-noplay')
+            })
+            .catch(err => setError(err.code))
+    
+    }
+
+
 
 
     return (
@@ -30,12 +45,15 @@ const Login = () => {
                 <form onSubmit={handleLogin} className="body p-2">
                     <fieldset className="fieldset ml-3">
                         <legend className="fieldset-legend">Email</legend>
-                        <input type="email" name="email" className="input md:w-[70%]" placeholder="Type here email" />
+                        <input type="email"
+                         name="email"
+                         onChange={(e)=>setEmail(e.target.value)}
+                          className="input md:w-[70%]" placeholder="Type here email" />
                     </fieldset>
                     <fieldset className="fieldset ml-3">
                         <legend className="fieldset-legend">Password</legend>
                         <input type="password" name="password" className="input md:w-[70%]" placeholder="Type here password" />
-                        <p className="label text-red-400 underline">Forget your password?</p>
+                        <p onClick={handleReset} className="link link-hover">Forget your password?</p>
                     </fieldset>
 
                     {
