@@ -9,6 +9,7 @@ import {
   FaYoutube,
   FaLinkedinIn,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -25,20 +26,20 @@ const Footer = () => {
             <div className="flex items-start gap-4 border-b border-gray-600 pb-4">
               <FaMapMarkerAlt className="text-lg mt-1" />
               <p>
-                Address Line 1, Address Line 2,
+                Dhaka,Bangladesh
                 <br />
-                City, Country, 0123456
+                Uttara
               </p>
             </div>
 
             <div className="flex items-center gap-4 border-b border-gray-600 pb-4">
               <FaPhoneAlt />
-              <p>1234567890</p>
+              <p>+880 1314761277</p>
             </div>
 
             <div className="flex items-center gap-4">
               <FaEnvelope />
-              <p>support@pepdev.com</p>
+              <p>tajmilurrahman91@gmail.com</p>
             </div>
           </div>
         </div>
@@ -51,20 +52,17 @@ const Footer = () => {
 
           <div className="grid grid-cols-2 gap-x-10 text-sm">
             <ul className="space-y-3">
-              <li className="hover:text-white cursor-pointer">Contact Us</li>
-              <li className="hover:text-white cursor-pointer">About Us</li>
-              <li className="hover:text-white cursor-pointer">Doctor</li>
-              <li className="hover:text-white cursor-pointer">Home</li>
-              <li className="hover:text-white cursor-pointer">Doctor</li>
-              <li className="hover:text-white cursor-pointer">Services</li>
+              <Link to={'/'} className="hover:text-white cursor-pointer">Home</Link><br />
+              <Link to={'/'} className="hover:text-white cursor-pointer">Contact Us</Link><br />
+              <Link to={'/blog-post'} className="hover:text-white cursor-pointer">Blog Post</Link><br />
+              <Link to={'/patient-details'} className="hover:text-white cursor-pointer">Appointment</Link><br />
+            
             </ul>
 
             <ul className="space-y-3">
-              <li className="hover:text-white cursor-pointer">Login</li>
-              <li className="hover:text-white cursor-pointer">Register</li>
-              <li className="hover:text-white cursor-pointer">
-                Forgot Password
-              </li>
+              <Link to={'/auth/login'} className="hover:text-white cursor-pointer w-full">Login</Link><br />
+              <Link to={'/auth/register'} className="hover:text-white cursor-pointer w-full">Register</Link>
+              
             </ul>
           </div>
         </div>
