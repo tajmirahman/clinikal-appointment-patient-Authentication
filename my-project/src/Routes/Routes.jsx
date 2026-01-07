@@ -47,8 +47,10 @@ const router = createBrowserRouter([
         loader: () => fetch('/latestPost.json')
     },
     {
-        path:'/patient-details',
-        element: <PatientDetails></PatientDetails>
+        path: '/patient-details',
+        element: <PrivateRoute>
+            <PatientDetails></PatientDetails>
+        </PrivateRoute>
     },
 
     {

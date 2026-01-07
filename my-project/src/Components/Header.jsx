@@ -12,8 +12,6 @@ const Header = () => {
     const navigate=useNavigate();
 
 
-    
-    
 
     const handleLogout = () => {
         logoutUser()
@@ -60,12 +58,13 @@ const Header = () => {
                 </ul>
             </div>
             <div className='text-white navbar-center hidden lg:flex'>
-                <ul className="menu menu-horizontal px-1 gap-3">
+                <ul className="menu menu-horizontal font-semibold px-1 gap-3">
                     <Link to={'/'}>Home</Link>
                     <Link>About</Link>
                     <Link>Doctor</Link>
                     <Link>My Accont</Link>
                     <Link to={'/blog-post'}>Blog</Link>
+                    <Link to={'/patient-details'}>Appointment Information</Link>
 
                 </ul>
             </div>
@@ -89,11 +88,13 @@ const Header = () => {
             {
                 open && (
                     <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
+                        
                         <div className="bg-white p-6 rounded-2xl w-[90%] max-w-md shadow-xl animate-scale">
+                            <h2 className='text-2xl my-2 text-center'>Appointment Form</h2>
                             <form onSubmit={hadleAppointment}>
                                 <fieldset className="fieldset">
                                     <legend className="fieldset-legend">Patient Name</legend>
-                                    <input type="text" name='name' defaultValue={user?.displayName} className="input" placeholder="" />
+                                    <input type="text" name='name' defaultValue={user?.displayName} className="input" placeholder="type your name" />
                                     
                                 </fieldset>
                                 <fieldset className="fieldset">
@@ -107,7 +108,7 @@ const Header = () => {
                                       
                                 </fieldset>
                                 <div>
-                                    <button type='submit' className='btn'>submit</button>
+                                    <button type='submit' className='btn mt-2 bg-[#32a3ac] text-white'>Submit</button>
                                 </div>
                             </form>
 

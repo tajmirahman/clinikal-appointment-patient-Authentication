@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { AuthContext } from './AuthPorvider';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -6,6 +6,7 @@ const Register = () => {
 
     const { createUser, userUpdate } = useContext(AuthContext);
     const navigate = useNavigate();
+    const [error, setError] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -14,7 +15,10 @@ const Register = () => {
         const photo = form.photo.value;
         const email = form.email.value;
         const password = form.password.value;
-        console.log({ name, photo, email, password })
+
+        if (password.length < 6) {
+            return setError('Password must be at least 6 character!!')
+        }
 
         createUser(email, password)
             .then(() => {
@@ -23,9 +27,11 @@ const Register = () => {
                     .then(() => {
                         navigate('/')
                     })
-                    .catch(err => console.log(err.code))
+                    .catch(err => setError(err.code))
             })
-            .catch(error => console.log(error.code))
+            .catch(() => { })
+        
+        form.reset();
 
     }
 
@@ -52,6 +58,9 @@ const Register = () => {
                         <legend className="fieldset-legend">Password</legend>
                         <input type="password" name='password' className="input w-[70%]" placeholder="Type here password" />
                     </fieldset>
+                    {
+                        error && <p className='text-red-400'>{error}</p>
+                    }
 
                     <div className='flex justify-center mt-3'>
                         <button className='btn bg-[#32a3ac] text-white'>Register</button>

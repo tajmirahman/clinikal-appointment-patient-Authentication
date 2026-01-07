@@ -1,24 +1,25 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "./AuthPorvider";
 import { Link } from "react-router-dom";
 
 
 const Login = () => {
-    const {loginUser}=useContext(AuthContext);
-    
-    const handleLogin=(e)=>{
-        e.preventDefault();
-        const form=e.target;
-        const email=form.email.value;
-        const password=form.password.value;
+    const { loginUser } = useContext(AuthContext);
+    const [error, setError] = useState('');
 
-        console.log(email,password)
+    const handleLogin = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        // console.log(email,password)
 
         loginUser(email, password)
-        .then(res=>{
-            console.log(res);
-        })
-        .catch(err=>console.log(err.code))
+            .then(() => { })
+            .catch(err => setError(err.code))
+
+        form.reset();
     }
 
 
@@ -36,6 +37,10 @@ const Login = () => {
                         <input type="password" name="password" className="input md:w-[70%]" placeholder="Type here password" />
                         <p className="label text-red-400 underline">Forget your password?</p>
                     </fieldset>
+
+                    {
+                        error && <p className='text-red-400 text-center'>{error}</p>
+                    }
 
                     <div className='flex justify-center mt-3'>
                         <button className='btn bg-[#32a3ac] text-white'>Login</button>
