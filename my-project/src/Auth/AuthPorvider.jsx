@@ -10,6 +10,28 @@ const AuthPorvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
+    const [comments, setComments]=useState(()=>{
+        try{
+            const storedComments=localStorage.getItem('comments');
+            return storedComments ? JSON.parse(storedComments) : [];
+        }catch{
+            return [] ;
+        }    
+    });
+
+    // for specific id
+    const addComments=(comments)=>{
+        setComments(prev=>[...prev,comments]);
+    }
+
+    useEffect(()=>{
+        if(comments){
+           return localStorage.setItem('comments', JSON.stringify(comments))
+        }
+    },[comments]);
+
+
+
     const [patient, setPatient] = useState(() => {
         // const storedPatient = localStorage.getItem('paitent');
         // return storedPatient ? JSON.parse(storedPatient) : [];
@@ -65,7 +87,10 @@ const AuthPorvider = ({ children }) => {
         loading,
         setPatient,
         patient,
-        addPatient
+        addPatient,
+        addComments,
+        setComments,
+        comments
     }
 
 

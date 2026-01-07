@@ -1,11 +1,23 @@
 import { Link } from 'react-router-dom';
 import proPic from '../../assets/image/download.png'
+import { useContext } from 'react';
+import { AuthContext } from '../../Auth/AuthPorvider';
 
 const BlogDetailsCard = ({ newBlog }) => {
 
-    const handleComments=(e)=>{
+    const { addComments, comments } = useContext(AuthContext);
+
+    const handleComments = (e) => {
         e.preventDefault();
-        console.log('yes')
+        const form = e.target;
+
+        const commentsInfo = {
+            id: Date.now(),
+            text: form.text.value
+        }
+
+        addComments(commentsInfo);
+        form.reset();
     }
 
 
@@ -29,10 +41,14 @@ const BlogDetailsCard = ({ newBlog }) => {
             </div>
             <div className='w-9/12 mx-auto space-y-4 shadow-lg p-2 mt-10'>
                 <div className="card text-center">
-                    <h2 className='text-2xl'>Comments (0)</h2>
+                    <h2 className='text-2xl'>Comments {comments.length}</h2>
                     <hr className='w-[60px] mx-auto bg-sky-300 border-t-2 my-2' />
                     <hr className='w-[50px] mx-auto bg-sky-300 border-t-2' />
-                    <p className='my-5'>No Comments Found!!!</p>
+                    <div>
+                        {
+                            comments.map(comment => (<p key={comment.id} className='my-5 text-sky-600'>{comment.text}</p>))
+                        }
+                    </div>
                 </div>
             </div>
             <div className='w-9/12 mx-auto space-y-4 shadow-lg p-2 mt-10'>
@@ -45,7 +61,7 @@ const BlogDetailsCard = ({ newBlog }) => {
                     <p className='mt-5'>You must be registered and logged in to Comment</p>
 
                     <div className='my-5 flex justify-center items-center gap-3'>
-                        <form onSubmit={handleComments}  className='*:border-2'>
+                        <form onSubmit={handleComments} className='*:border-2'>
                             <input type="text" name='text' className='p-2 ' placeholder='please write here ...' />
 
                             <button className='btn bg-[#32a3ac]'>send</button>
