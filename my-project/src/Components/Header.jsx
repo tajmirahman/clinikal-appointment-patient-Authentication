@@ -28,7 +28,8 @@ const Header = () => {
         const patientInfo={
             id:Date.now(),
             name:form.name.value,
-            disease:form.disease.value
+            disease:form.disease.value,
+            email:form.email.value
         }
         addPatient(patientInfo);
 
@@ -94,6 +95,11 @@ const Header = () => {
                                     <legend className="fieldset-legend">Patient Name</legend>
                                     <input type="text" name='name' className="input" placeholder="" />
                                     
+                                </fieldset>
+                                <fieldset className="fieldset">
+                                    <legend className="fieldset-legend">Patient Disease</legend>
+                                    <input type="email" name="email" defaultValue={user?.email || ""}className="input" placeholder="type your disease" />
+                                      
                                 </fieldset>
                                 <fieldset className="fieldset">
                                     <legend className="fieldset-legend">Patient Disease</legend>

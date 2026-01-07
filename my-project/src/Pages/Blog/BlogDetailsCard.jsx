@@ -2,6 +2,13 @@ import { Link } from 'react-router-dom';
 import proPic from '../../assets/image/download.png'
 
 const BlogDetailsCard = ({ newBlog }) => {
+
+    const handleComments=(e)=>{
+        e.preventDefault();
+        console.log('yes')
+    }
+
+
     return (
         <>
             <div className="w-9/12 mx-auto space-y-4 shadow-lg p-2">
@@ -33,10 +40,18 @@ const BlogDetailsCard = ({ newBlog }) => {
                     <h2 className='text-2xl'>Leave a reply</h2>
                     <hr className='w-[60px] mx-auto bg-sky-300 border-t-2 my-2' />
                     <hr className='w-[50px] mx-auto bg-sky-300 border-t-2' />
+
+
                     <p className='mt-5'>You must be registered and logged in to Comment</p>
-                    <div className='my-5'>
-                        <Link to={'/auth/login'} className='btn bg-[#32a3ac]'>Login</Link>
+
+                    <div className='my-5 flex justify-center items-center gap-3'>
+                        <form onSubmit={handleComments}  className='*:border-2'>
+                            <input type="text" name='text' className='p-2 ' placeholder='please write here ...' />
+
+                            <button className='btn bg-[#32a3ac]'>send</button>
+                        </form>
                     </div>
+
                 </div>
             </div>
         </>
