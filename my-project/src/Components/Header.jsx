@@ -93,7 +93,7 @@ const Header = () => {
                             <form onSubmit={hadleAppointment}>
                                 <fieldset className="fieldset">
                                     <legend className="fieldset-legend">Patient Name</legend>
-                                    <input type="text" name='name' className="input" placeholder="" />
+                                    <input type="text" name='name' defaultValue={user?.displayName} className="input" placeholder="" />
                                     
                                 </fieldset>
                                 <fieldset className="fieldset">

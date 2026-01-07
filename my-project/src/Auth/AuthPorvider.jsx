@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../Firebase/firebase.config";
 
@@ -10,6 +10,7 @@ const AuthPorvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
+    // this is for comments section
     const [comments, setComments]=useState(()=>{
         try{
             const storedComments=localStorage.getItem('comments');
@@ -19,7 +20,7 @@ const AuthPorvider = ({ children }) => {
         }    
     });
 
-    // for specific id
+    // for specific new id create
     const addComments=(comments)=>{
         setComments(prev=>[...prev,comments]);
     }
@@ -31,10 +32,8 @@ const AuthPorvider = ({ children }) => {
     },[comments]);
 
 
-
+    // for appointment 
     const [patient, setPatient] = useState(() => {
-        // const storedPatient = localStorage.getItem('paitent');
-        // return storedPatient ? JSON.parse(storedPatient) : [];
         try {
             const storedPatient = localStorage.getItem("patient");
             return storedPatient ? JSON.parse(storedPatient) : [];
@@ -51,7 +50,9 @@ const AuthPorvider = ({ children }) => {
         if(patient){
             localStorage.setItem('patient', JSON.stringify(patient))
         }
-    },[patient])
+    },[patient]);
+
+
 
     const createUser = (email, password) => {
         return createUserWithEmailAndPassword(auth, email, password);
@@ -63,6 +64,10 @@ const AuthPorvider = ({ children }) => {
 
     const logoutUser = () => {
         return signOut(auth)
+    }
+
+    const userUpdate=(updateData)=>{
+        return updateProfile(auth.currentUser,updateData)
     }
 
     useEffect(() => {
@@ -80,6 +85,7 @@ const AuthPorvider = ({ children }) => {
 
     const authInfo = {
         createUser,
+        userUpdate,
         loginUser,
         user,
         setUser,
