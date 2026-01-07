@@ -12,19 +12,21 @@ console.log(patient)
     }
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-100">
-            <div className="bg-white p-6 rounded-2xl shadow-xl w-96">
-                <h2 className="text-2xl font-bold mb-4 text-center">
-                    Patient Information
+        <div className="min-h-screen flex justify-center items-center bg-gray-100">
+            <div className="bg-white p-6 rounded-xl shadow w-full max-w-md">
+                <h2 className="text-xl font-bold mb-4 text-center">
+                    All Patient Details
                 </h2>
 
-                <p className="mb-2">
-                    <span className="font-semibold">Name:</span> {patient.name}
-                </p>
-
-                <p>
-                    <span className="font-semibold">Disease:</span> {patient.disease}
-                </p>
+                {patient.map(patient => (
+                    <div
+                        key={patient.id}
+                        className="border p-3 rounded-lg mb-3"
+                    >
+                        <p><b>Name:</b> {patient.name} {patient.length}</p>
+                        <p><b>Disease:</b> {patient.disease}</p>
+                    </div>
+                ))}
             </div>
         </div>
     );

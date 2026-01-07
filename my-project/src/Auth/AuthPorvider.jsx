@@ -12,14 +12,18 @@ const AuthPorvider = ({ children }) => {
 
     const [patient, setPatient] = useState(() => {
         // const storedPatient = localStorage.getItem('paitent');
-        // return storedPatient ? JSON.parse(storedPatient) : null;
+        // return storedPatient ? JSON.parse(storedPatient) : [];
         try {
             const storedPatient = localStorage.getItem("patient");
-            return storedPatient ? JSON.parse(storedPatient) : null;
+            return storedPatient ? JSON.parse(storedPatient) : [];
         } catch {
             return null;
         }
     });
+
+    const addPatient = (patient) => {
+        setPatient(prev => [...prev, patient]);
+    };
 
     useEffect(()=>{
         if(patient){
@@ -60,7 +64,8 @@ const AuthPorvider = ({ children }) => {
         logoutUser,
         loading,
         setPatient,
-        patient
+        patient,
+        addPatient
     }
 
 

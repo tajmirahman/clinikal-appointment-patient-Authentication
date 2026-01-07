@@ -7,7 +7,7 @@ import { AuthContext } from '../Auth/AuthPorvider';
 const Header = () => {
 
     const { user, logoutUser } = useContext(AuthContext);
-    const {setPatient}= useContext(AuthContext);
+    const {addPatient}= useContext(AuthContext);
     const [open, setOpen] = useState(false);
     const navigate=useNavigate();
 
@@ -24,19 +24,18 @@ const Header = () => {
     const hadleAppointment=(e)=>{
         e.preventDefault();
         const form= e.target;
-        const name=form.name.value;
-        const disease=form.disease.value;
-
      
         const patientInfo={
-            name,disease
+            id:Date.now(),
+            name:form.name.value,
+            disease:form.disease.value
         }
-        setPatient(patientInfo);
+        addPatient(patientInfo);
 
         alert('data submit');
 
         setOpen(false);
-        
+
         navigate('/patient-details')
 
     }
