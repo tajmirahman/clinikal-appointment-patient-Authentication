@@ -97,7 +97,7 @@ const Header = () => {
                                     
                                 </fieldset>
                                 <fieldset className="fieldset">
-                                    <legend className="fieldset-legend">Patient Disease</legend>
+                                    <legend className="fieldset-legend">Email</legend>
                                     <input type="email" name="email" defaultValue={user?.email || ""}className="input" placeholder="type your disease" />
                                       
                                 </fieldset>

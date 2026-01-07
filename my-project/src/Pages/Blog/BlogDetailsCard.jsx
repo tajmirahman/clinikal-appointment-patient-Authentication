@@ -41,7 +41,7 @@ const BlogDetailsCard = ({ newBlog }) => {
             </div>
             <div className='w-9/12 mx-auto space-y-4 shadow-lg p-2 mt-10'>
                 <div className="card text-center">
-                    <h2 className='text-2xl'>Comments {comments.length}</h2>
+                    <h2 className='text-2xl'>Comments ({comments.length})</h2>
                     <hr className='w-[60px] mx-auto bg-sky-300 border-t-2 my-2' />
                     <hr className='w-[50px] mx-auto bg-sky-300 border-t-2' />
                     <div>
@@ -58,7 +58,7 @@ const BlogDetailsCard = ({ newBlog }) => {
                     <hr className='w-[50px] mx-auto bg-sky-300 border-t-2' />
 
 
-                    <p className='mt-5'>You must be registered and logged in to Comment</p>
+                    <p className='mt-5'>Please keep a comment</p>
 
                     <div className='my-5 flex justify-center items-center gap-3'>
                         <form onSubmit={handleComments} className='*:border-2'>
