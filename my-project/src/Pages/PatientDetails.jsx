@@ -5,7 +5,7 @@ import { AuthContext } from '../Auth/AuthPorvider';
 const PatientDetails = () => {
 
     const {patient}=useContext(AuthContext);
-
+console.log(patient)
     // const location = useLocation();
     // const patient = location.state;
 

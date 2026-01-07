@@ -1,14 +1,18 @@
 
 import { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Auth/AuthPorvider';
 
 
 const Header = () => {
 
-    const { user, logoutUser,setPatient } = useContext(AuthContext);
+    const { user, logoutUser } = useContext(AuthContext);
+    const {setPatient}= useContext(AuthContext);
     const [open, setOpen] = useState(false);
+    const navigate=useNavigate();
 
+
+    
     
 
     const handleLogout = () => {
@@ -23,6 +27,7 @@ const Header = () => {
         const name=form.name.value;
         const disease=form.disease.value;
 
+     
         const patientInfo={
             name,disease
         }
@@ -30,7 +35,9 @@ const Header = () => {
 
         alert('data submit');
 
-        setPatient(false);
+        setOpen(false);
+        
+        navigate('/patient-details')
 
     }
 
@@ -62,13 +69,17 @@ const Header = () => {
 
                 </ul>
             </div>
+            
             <div >
+                <button onClick={() => setOpen(true)} className='btn bg-[#29A3AA] text-white'>Make An Appointment</button>
+                
+                
                 {
                     user && user?.email ? (
-                        <button onClick={handleLogout} className='btn bg-[#29A3AA] text-white'>Logout</button>
+                       <button onClick={handleLogout} className='btn bg-[#29A3AA] text-white'>Logout</button>
                     )
                         :
-                        <button onClick={() => setOpen(true)} className='btn bg-[#29A3AA] text-white'>Make An Appointment</button>
+                        ''
 
                 }
 
@@ -82,12 +93,12 @@ const Header = () => {
                             <form onSubmit={hadleAppointment}>
                                 <fieldset className="fieldset">
                                     <legend className="fieldset-legend">Patient Name</legend>
-                                    <input type="text" name='name' className="input" placeholder="Type here" />
+                                    <input type="text" name='name' className="input" placeholder="" />
                                     
                                 </fieldset>
                                 <fieldset className="fieldset">
                                     <legend className="fieldset-legend">Patient Disease</legend>
-                                    <input type="text" name='disease' className="input" placeholder="Type here" />
+                                    <input type="text" name="disease" className="input" placeholder="type your disease" />
                                       
                                 </fieldset>
                                 <div>

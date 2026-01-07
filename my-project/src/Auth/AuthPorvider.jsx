@@ -8,8 +8,18 @@ export const AuthContext = createContext();
 const AuthPorvider = ({ children }) => {
 
     const [user, setUser] = useState(null);
-    const [loading, setLoading]=useState(true);
-    const [patient, setPatient]=useState(null);
+    const [loading, setLoading] = useState(true);
+
+    const [patient, setPatient] = useState(() => {
+        const storedPatient = localStorage.getItem('paitent');
+        return storedPatient ? JSON.parse(storedPatient) : "";
+    });
+
+    useEffect(()=>{
+        if(patient){
+            localStorage.setItem('patient', JSON.stringify(patient))
+        }
+    },[patient])
 
     const createUser = (email, password) => {
         return createUserWithEmailAndPassword(auth, email, password);
@@ -19,7 +29,7 @@ const AuthPorvider = ({ children }) => {
         return signInWithEmailAndPassword(auth, email, password);
     }
 
-    const logoutUser=()=>{
+    const logoutUser = () => {
         return signOut(auth)
     }
 
