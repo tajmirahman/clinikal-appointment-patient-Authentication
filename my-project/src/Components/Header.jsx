@@ -55,7 +55,7 @@ const Header = () => {
                     <Link>My Accont</Link> */}
                     <Link to={'/blog-post'}>Blog</Link>
                     <Link to={'/patient-details'}>Appointment Information</Link>
-                    <Link>About</Link>
+                    <Link to={'/'}>About</Link>
                 </ul>
             </div>
             <div className='text-white navbar-center hidden lg:flex'>
@@ -65,7 +65,7 @@ const Header = () => {
                     <Link>My Accont</Link> */}
                     <Link to={'/blog-post'}>Blog</Link>
                     <Link to={'/patient-details'}>Appointment Information</Link>
-                    <Link>About</Link>
+                    <Link to={'/'}>About</Link>
 
                 </ul>
             </div>
