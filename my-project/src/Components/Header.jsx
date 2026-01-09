@@ -2,6 +2,7 @@
 import { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Auth/AuthPorvider';
+import SweetNotify from '../../sweetAlert';
 
 
 const Header = () => {
@@ -31,11 +32,11 @@ const Header = () => {
         }
         addPatient(patientInfo);
 
-        alert('data submit');
-
         setOpen(false);
 
-        navigate('/patient-details')
+        navigate('/')
+        SweetNotify.success("Appointment booked successfully!");
+        form.reset();
 
     }
 

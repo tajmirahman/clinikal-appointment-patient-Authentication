@@ -51,7 +51,7 @@ const Footer = () => {
           </h3>
 
           <div className="grid grid-cols-2 gap-x-10 text-sm">
-            <ul className="space-y-3">
+            <ul className="space-y-5">
               <Link to={'/'} className="hover:text-white cursor-pointer">Home</Link><br />
               <Link to={'/'} className="hover:text-white cursor-pointer">Contact Us</Link><br />
               <Link to={'/blog-post'} className="hover:text-white cursor-pointer">Blog Post</Link><br />
