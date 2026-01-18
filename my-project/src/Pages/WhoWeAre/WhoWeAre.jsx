@@ -19,7 +19,7 @@ const WhoWeAre = () => {
 
     }, [])
 
-    console.log(clinicList)
+    // console.log(clinicList)
 
     return (
         <div

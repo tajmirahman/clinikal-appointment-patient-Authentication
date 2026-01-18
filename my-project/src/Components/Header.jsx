@@ -8,9 +8,9 @@ import SweetNotify from '../../sweetAlert';
 const Header = () => {
 
     const { user, logoutUser } = useContext(AuthContext);
-    const {addPatient}= useContext(AuthContext);
+    const { addPatient } = useContext(AuthContext);
     const [open, setOpen] = useState(false);
-    const navigate=useNavigate();
+    const navigate = useNavigate();
 
 
 
@@ -20,15 +20,15 @@ const Header = () => {
             .catch(() => { })
     }
 
-    const hadleAppointment=(e)=>{
+    const hadleAppointment = (e) => {
         e.preventDefault();
-        const form= e.target;
-     
-        const patientInfo={
-            id:Date.now(),
-            name:form.name.value,
-            disease:form.disease.value,
-            email:form.email.value
+        const form = e.target;
+
+        const patientInfo = {
+            id: Date.now(),
+            name: form.name.value,
+            disease: form.disease.value,
+            email: form.email.value
         }
         addPatient(patientInfo);
 
@@ -55,7 +55,9 @@ const Header = () => {
                     {/* <Link>Doctor</Link>
                     <Link>My Accont</Link> */}
                     <Link to={'/blog-post'}>Blog</Link>
-                    <Link to={'/patient-details'}>Appointment Information</Link>
+                    {
+                        user?.email && (<Link to={'/patient-details'}>Appointment Information</Link>)
+                    }
                     <Link to={'/'}>About</Link>
                 </ul>
             </div>
@@ -65,22 +67,24 @@ const Header = () => {
                     {/* <Link>Doctor</Link>
                     <Link>My Accont</Link> */}
                     <Link to={'/blog-post'}>Blog</Link>
-                    <Link to={'/patient-details'}>Appointment Information</Link>
+                    {
+                        user?.email && (<Link to={'/patient-details'}>Appointment Information</Link>)
+                    }
                     <Link to={'/'}>About</Link>
 
                 </ul>
             </div>
-            
+
             <div >
                 <button onClick={() => setOpen(true)} className='btn bg-[#29A3AA] text-white'>Make An Appointment</button>
-                
-                
+
+
                 {
                     user && user?.email ? (
-                       <button onClick={handleLogout} className='btn bg-[#29A3AA] text-white'>Logout</button>
+                        <button onClick={handleLogout} className='btn bg-[#29A3AA] text-white'>Logout</button>
                     )
                         :
-                        ''
+                        <Link to={'/auth/login'}  className='btn bg-[#29A3AA] text-white'>Login</Link>
 
                 }
 
@@ -90,24 +94,24 @@ const Header = () => {
             {
                 open && (
                     <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
-                        
+
                         <div className="bg-white p-6 rounded-2xl w-[90%] max-w-md shadow-xl animate-scale">
                             <h2 className='text-2xl my-2 text-center'>Appointment Form</h2>
                             <form onSubmit={hadleAppointment}>
                                 <fieldset className="fieldset">
                                     <legend className="fieldset-legend">Patient Name</legend>
                                     <input type="text" name='name' defaultValue={user?.displayName} className="input" placeholder="type your name" />
-                                    
+
                                 </fieldset>
                                 <fieldset className="fieldset">
                                     <legend className="fieldset-legend">Email</legend>
-                                    <input type="email" name="email" defaultValue={user?.email || ""}className="input" placeholder="type your disease" />
-                                      
+                                    <input type="email" name="email" defaultValue={user?.email || ""} className="input" placeholder="type your disease" />
+
                                 </fieldset>
                                 <fieldset className="fieldset">
                                     <legend className="fieldset-legend">Patient Disease</legend>
                                     <input type="text" name="disease" className="input" placeholder="type your disease" />
-                                      
+
                                 </fieldset>
                                 <div>
                                     <button type='submit' className='btn mt-2 bg-[#32a3ac] text-white'>Submit</button>

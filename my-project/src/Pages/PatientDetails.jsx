@@ -6,7 +6,7 @@ import Header from '../Components/Header';
 const PatientDetails = () => {
 
     const { patient } = useContext(AuthContext);
-    console.log(patient)
+    // console.log(patient)
 
     if (!patient) {
         return <p>No patient data found</p>;

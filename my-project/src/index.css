@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@plugin "daisyui" {
+  themes: light --default;
+}
+
 * {
   font-family: "Poppins", sans-serif;
 }

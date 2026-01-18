@@ -68,7 +68,8 @@ const AuthPorvider = ({ children }) => {
     }
 
     const logoutUser = () => {
-        return signOut(auth)
+        return signOut(auth);
+        
     }
 
     const userUpdate=(updateData)=>{
@@ -89,7 +90,7 @@ const AuthPorvider = ({ children }) => {
         }
     }, [])
 
-    console.log(user);
+    // console.log(user);
 
 
     const authInfo = {

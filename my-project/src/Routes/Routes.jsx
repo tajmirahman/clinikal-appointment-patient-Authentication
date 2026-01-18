@@ -50,8 +50,8 @@ const router = createBrowserRouter([
     {
         path: '/patient-details',
         element: <PrivateRoute>
-            <PatientDetails></PatientDetails>
-        </PrivateRoute>
+                <PatientDetails></PatientDetails>
+            </PrivateRoute>
     },
 
     {
@@ -69,8 +69,8 @@ const router = createBrowserRouter([
         ]
     },
     {
-        path:'/reset-noplay',
-        element:<Norply></Norply>
+        path: '/reset-noplay',
+        element: <Norply></Norply>
 
     },
     {

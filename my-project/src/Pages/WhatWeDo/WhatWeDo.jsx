@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 const WhatWeDo = () => {
     const data = useLoaderData();
-    console.log(data.length)
+    // console.log(data.length)
 
     const [showAll, setShowAll] = useState(false);
 
